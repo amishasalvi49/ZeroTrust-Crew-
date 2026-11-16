@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DisasterMesh</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav class="navbar">
+  <h1>DisasterMesh</h1>
+  <button id="logoutButton">Logout</button>
+</nav>
+  <div class="container">
+    <h1>DisasterMesh</h1>
+    <p>Community disaster response platform</p>
+
+    <div class="form-box">
+      <h2>Signup</h2>
+
+      <label>Name</label>
+      <input id="signupName" type="text" placeholder="Enter your name" />
+
+      <label>Email</label>
+      <input id="signupEmail" type="email" placeholder="Enter your email" />
+
+      <label>Phone</label>
+      <input id="signupPhone" type="text" placeholder="Enter your phone number" />
+
+      <label>Role</label>
+      <select id="signupRole">
+        <option value="citizen">Citizen</option>
+        <option value="volunteer">Volunteer</option>
+        <option value="admin">Admin</option>
+      </select>
+
+      <label>Password</label>
+      <input id="signupPassword" type="password" placeholder="Enter password" />
+
+      <button id="signupButton">Create Account</button>
+
+      <p id="signupMessage"></p>
+    </div>
+
+    <div class="form-box">
+      <h2>Login</h2>
+
+      <label>Email</label>
+      <input id="loginEmail" type="email" placeholder="Enter your email" />
+
+      <label>Password</label>
+      <input id="loginPassword" type="password" placeholder="Enter password" />
+
+      <button id="loginButton">Login</button>
+
+      <p id="loginMessage"></p>
+    </div>
+  </div>
+
+  <div class="form-box">
+  <h2>Account</h2>
+  <p id="logoutMessage"></p>
+</div>
+  
+   <div class="stats-box">
+  <h2>Dashboard Stats</h2>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <h3>Total Reports</h3>
+      <p id="totalReports">0</p>
+    </div>
+    
+    <div class="stat-card">
+      <h3>Pending</h3>
+      <p id="pendingReports">0</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>In Progress</h3>
+      <p id="inProgressReports">0</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>Resolved</h3>
+      <p id="resolvedReports">0</p>
+    </div>
+  </div>
+</div>
+<div class="form-box">
+  <h2>Admin Panel</h2>
+
+  <label>Admin Email</label>
+  <input id="adminEmail" type="email" placeholder="Enter admin email" />
+
+  <button id="adminLoginButton">Admin Login</button>
+
+  <p id="adminMessage"></p>
+  <div id="adminUsersList"></div>
+</div>
+
+  <div class="form-box">
+  <h2>Report Disaster</h2>
+
+  <label>Disaster Type</label>
+  <select id="reportType">
+    <option value="Flood">Flood</option>
+    <option value="Fire">Fire</option>
+    <option value="Earthquake">Earthquake</option>
+    <option value="Cyclone">Cyclone</option>
+    <option value="Landslide">Landslide</option>
+    <option value="Other">Other</option>
+  </select>
+
+  <label>Location</label>
+  <input id="reportLocation" type="text" placeholder="Enter location" />
+
+  <label>Description</label>
+  <textarea id="reportDescription" rows="4" placeholder="Describe the disaster"></textarea>
+   
+  <label>Priority</label>
+<select id="reportPriority">
+  <option value="low">Low</option>
+  <option value="medium">Medium</option>
+  <option value="high">High</option>
+  <option value="critical">Critical</option>
+</select>
+  <button id="reportButton">Submit Report</button>
+
+  <p id="reportMessage"></p>
+</div>
+
+<div class="form-box">
+  <h2>All Reports</h2>
+  <label>Filter by Disaster Type</label>
+<select id="filterType">
+  <option value="">All</option>
+  <option value="Flood">Flood</option>
+  <option value="Fire">Fire</option>
+  <option value="Earthquake">Earthquake</option>
+  <option value="Cyclone">Cyclone</option>
+  <option value="Landslide">Landslide</option>
+  <option value="Other">Other</option>
+</select>
+
+<label>Filter by Status</label>
+<select id="filterStatus">
+  <option value="">All</option>
+  <option value="pending">Pending</option>
+  <option value="in_progress">In Progress</option>
+  <option value="resolved">Resolved</option>
+</select>
+
+<label for="filterPriority">Filter by Priority</label>
+<select id="filterPriority">
+  <option value="">All</option>
+  <option value="low">Low</option>
+  <option value="medium">Medium</option>
+  <option value="high">High</option>
+  <option value="critical">Critical</option>
+</select>
+
+<label>Search Reports</label>
+<input id="searchInput" type="text" placeholder="Search by location or description" />
+
+<button id="searchButton">Search</button>
+
+<button id="filterButton">Apply Filter</button>
+  <div id="reportsList"></div>
+</div>
+<div id="toast-container"></div>
+   <footer class="footer">
+  <p>© 2026 DisasterMesh. All rights reserved.</p>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
